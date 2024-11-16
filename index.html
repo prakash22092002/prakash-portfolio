@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Portfolio Website Design</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font awesome cdn font icon css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="hero-header">
+      <div class="wrapper">
+        <header>
+          <div class="logo">
+            <i class="fa-solid fa-p"></i>
+            <div class="logo-text">Prakash Paudel</div>
+          </div>
+          <nav>
+            <div class="togglebtn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <ul class="navlinks">
+              <li><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <!-- <li><a href="#blog">Blog</a></li> -->
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </header>
+        <div class="container">
+          <div class="hero-pic">
+            <img src="images/profile_photot_prakash.jpg" alt="profile pic" />
+          </div>
+          <div class="hero-text">
+            <h5>Hii , am</h5>
+            <h1>Prakash Paudel</h1>
+            <h5>I'm <span class="input">Frontend Developer</span></h5>
+            <div class="btn-group">
+              <a href="images/PrakashPaudel-FrontendDeveloper(React)-scF8.pdf" download="images/PrakashPaudel-FrontendDeveloper(React)-scF8.pdf" class="btn active">Resume</a>
+              <a href="#contact" class="btn">Contact</a>
+            </div>
+            <div class="social">
+              <a href="#"><i class="fab fa-github"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div id="projectContainer"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="about-me" id="about">
+      <div class="wrapper">
+        <h2>About Me</h2>
+        <p>
+          Hello! I'm Prakash Paudel, a passionate Frontend Developer from
+          Chennai. I completed my undergraduate degree in B.Tech- Information
+          Technology at Panimalar Engineering College, affiliated with Anna
+          University, Chennai, Tamil Nadu. Currently, I am pursuing a Full Stack
+          Web Development course at Masai School, Bengaluru, Karnataka. My
+          journey in web development began with a fascination for how websites
+          work and has evolved into a full-fledged career. I specialize in
+          crafting user-friendly, responsive designs that not only look good but
+          also perform flawlessly across devices.
+        </p>
+        
+            
+    <br><br><br>
+    <h3>TECHNICAL SKILLS</h3><br>
+    <p>HTML , CSS , JAVASCRIPT , PYTHON , REACT.JS , BOOTSTRAP , MONGO db , GIT & GITHUB , PROMPTING</p>
+        
+      </div>
+    </section>
+
+    <section class="projects" id="projects">
+      <div class="wrapper">
+        <h2>Projects</h2>
+        <div class="project-container">
+          <div class="project">
+            <div class="project-image">
+              <img
+                src="images/Screenshot 2024-11-16 154929.png"
+                alt="UI-Library Project Image"
+              />
+            </div>
+            <div class="project-info">
+              <h3>UI-Library</h3>
+              <p>
+                A comprehensive library of UI components designed for modern web
+                applications.
+              </p>
+              <div class="btn-group">
+                <a
+                  href="https://github.com/prakash22092002/UI-Library-Website-"
+                  target="_blank"
+                  class="btn"
+                  >GitHub</a
+                >
+                <a
+                  href="https://pixel-ui1.netlify.app/"
+                  target="_blank"
+                  class="btn"
+                  >Live Demo</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="project">
+            <div class="project-image">
+              <img
+                src="images/Screenshot 2024-11-16 182655.png"
+                alt="CloneScript Programming Language Project Image"
+              />
+            </div>
+            <div class="project-info">
+              <h3>CloneScript Programming Language</h3>
+              <p>
+                A programming language project aimed at simplifying coding
+                through intuitive syntax and powerful features.
+              </p>
+              <div class="btn-group">
+                <a
+                  href="https://github.com/ankursinha-github/AI-Architects_001/tree/develop"
+                  target="_blank"
+                  class="btn"
+                  >GitHub</a
+                >
+                <a
+                  href="https://clonescriptlang.netlify.app/"
+                  target="_blank"
+                  class="btn"
+                  >Live Demo</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="blog" id="blog">
+      <div class="wrapper">
+        <h2>Blog</h2>
+        <p>
+          Here, you will find my latest blog posts, insights, and updates on
+          various topics related to web development and technology.
+        </p>
+      </div>
+    </section> -->
+
+    <section class="contact" id="contact">
+      <div class="wrapper">
+        <h2>Contact Me</h2>
+        <p>
+          Feel free to reach out to me through any of the following platforms:
+        </p>
+        <ul>
+          <li>
+            Email:
+            <a href="mailto:p.prakashpaudel35@gmail.com"
+              >p.prakashpaudel35@gmail.com</a
+            >
+          </li>
+          <li>
+            LinkedIn:
+            <a
+              href="https://www.linkedin.com/in/prakash-paudel-226501251/"
+              target="_blank"
+              >Prakash Paudel on LinkedIn</a
+            >
+          </li>
+          <li>
+            GitHub:
+            <a href="https://github.com/prakash22092002" target="_blank"
+              >Prakash Paudel on GitHub</a
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Typed JS for typing text effect -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+    <script>
+      /** Creating button click show hide navbar **/
+      var togglebtn = document.querySelector(".togglebtn");
+      var nav = document.querySelector(".navlinks");
+      var links = document.querySelector(".navlinks li");
+
+      togglebtn.addEventListener("click", function () {
+        this.classList.toggle("click");
+        nav.classList.toggle("open");
+      });
+
+      var typed = new Typed(".input", {
+        strings: ["Frontend Developer", "UX Designer", "Web Developer"],
+        typedSpeed: 10,
+        backSpeed: 55,
+        loop: true,
+      });
+    </script>
+  </body>
+</html>
