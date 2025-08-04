@@ -347,12 +347,56 @@ img {
     color: #f0f8ff;
 }
 
-.project-image{
+.project-image {
     max-width: 300px;
     object-fit: contain;
-    margin: 3em   auto;
+    margin: 3em auto;
 }
 
-.project-image > img{
+.project-image>img {
     width: 100%;
+}
+
+/* Work Experience Section */
+.experience {
+    background-color: #222;
+    color: #e5e5e5;
+    padding: 60px 20px;
+    text-align: left;
+}
+
+.experience h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.experience-item {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.experience-item h3 {
+    color: #007ced;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.experience-item p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.experience-item ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.experience-item li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #e5e5e5;
 }
