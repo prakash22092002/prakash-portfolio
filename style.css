@@ -1,15 +1,28 @@
-/* Global Styles */
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: poppins, sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-decoration: none;
 }
 
 body {
     overflow-x: hidden;
     background-color: #f4f4f4;
+    scroll-behavior: smooth;
+}
+
+/* Fixed/Sticky Navbar */
+.navbar-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(34, 34, 34, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Hero Header */
@@ -18,6 +31,8 @@ body {
     height: 100%;
     min-height: 100vh;
     background: #222;
+    padding-top: 80px;
+    /* Account for fixed navbar */
 }
 
 .wrapper {
@@ -28,7 +43,7 @@ body {
 }
 
 header {
-    padding: 40px 0 30px;
+    padding: 20px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -65,7 +80,7 @@ nav .togglebtn {
     width: 35px;
     height: 35px;
     position: absolute;
-    top: 45px;
+    top: 25px;
     right: 3%;
     z-index: 5;
     cursor: pointer;
@@ -93,6 +108,12 @@ nav .navlinks li {
 nav .navlinks li a {
     color: #e5e5e5;
     margin-right: 2.5rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav .navlinks li a:hover {
+    color: #007ced;
 }
 
 /* Container */
@@ -100,7 +121,7 @@ nav .navlinks li a {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-top: 4rem;
+    padding-top: 2rem;
 }
 
 .container .hero-pic {
@@ -116,10 +137,12 @@ nav .navlinks li a {
     height: 100%;
     width: 100%;
     transition: 0.5s;
+    transform: scale(1.2);
+    /* object-fit: cover; */
 }
 
 .hero-pic img:hover {
-    transform: scale(1.2);
+    transform: scale(1.25);
 }
 
 .hero-text {
@@ -161,10 +184,17 @@ nav .navlinks li a {
     border-radius: 30px;
     border: 2px solid #e5e5e5;
     box-shadow: 0 10px 10px -8px rgb(0 0 0 / 78%);
+    transition: all 0.3s ease;
 }
 
 .btn.active {
     border-color: #007ced;
+    background-color: #007ced;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 20px -8px rgba(0, 0, 0, 0.8);
 }
 
 .hero-text .social i {
@@ -179,18 +209,279 @@ nav .navlinks li a {
     transform: rotate(360deg);
 }
 
-img {
-    transform: scale(1.2);
+/* About Me Section */
+.about-me {
+    background-color: #007ced;
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
 }
 
-/* Responsive Design & Navbar for Small Screen */
+.about-me h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-me p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Skills Section */
+.skills {
+    background-color: #f9f9f9;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #222;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skill-category {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.skill-category:hover {
+    transform: translateY(-10px);
+}
+
+.skill-category h3 {
+    color: #007ced;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.skill-tag {
+    background-color: #007ced;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Projects Section */
+.projects {
+    background-color: #222;
+    color: #e5e5e5;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background: #333;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+}
+
+.project-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.1);
+}
+
+.project-info {
+    padding: 30px;
+}
+
+.project-info h3 {
+    font-size: 1.8rem;
+    color: #007ced;
+    margin-bottom: 15px;
+}
+
+.project-info p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #ccc;
+}
+
+.project-info .btn-group {
+    margin: 0;
+}
+
+.project-info .btn {
+    background-color: #007ced;
+    border: 2px solid #007ced;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.project-info .btn:hover {
+    background-color: transparent;
+    color: #007ced;
+}
+
+/* Experience Section */
+.experience {
+    background-color: #f9f9f9;
+    color: #222;
+    padding: 80px 20px;
+    text-align: left;
+}
+
+.experience h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #222;
+}
+
+.experience-item {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.experience-item h3 {
+    color: #007ced;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.experience-item p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #666;
+    font-weight: 500;
+}
+
+.experience-item ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.experience-item li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+    position: relative;
+    padding-left: 25px;
+}
+
+.experience-item li::before {
+    content: '▶';
+    color: #007ced;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Contact Me Section */
+.contact {
+    background-color: #007ced;
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.contact ul {
+    list-style-type: none;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact li {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.contact a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
 @media (max-width: 930px) {
     nav .togglebtn {
         display: initial;
     }
 
     .click {
-        top: 45px;
+        top: 25px;
     }
 
     .click span {
@@ -214,12 +505,13 @@ img {
 
     nav .navlinks {
         position: absolute;
-        top: 110px;
+        top: 70px;
         right: -100%;
         bottom: 0;
         width: 60%;
         height: 100vh;
-        background-color: #222;
+        background-color: rgba(34, 34, 34, 0.95);
+        backdrop-filter: blur(10px);
         z-index: 3;
         box-shadow: 5px 13px 30px rgba(0, 0, 0, 0.1);
         transition: 0.5s;
@@ -249,154 +541,29 @@ img {
 
     .hero-text {
         padding: 40px 0px;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
     }
 }
 
-/* About Me Section */
-.about-me {
-    background-color: #007ced;
-    color: #fff;
-    padding: 60px 20px;
-    text-align: center;
-}
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 2rem;
+    }
 
-.about-me h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.about-me p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-}
-
-/* Projects Section */
-.projects {
-    background-color: #222;
-    color: #e5e5e5;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.projects h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.projects .project {
-    margin-bottom: 40px;
-}
-
-.projects .project h3 {
-    font-size: 2rem;
-    color: #007ced;
-}
-
-.projects .project p {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-}
-
-.projects .btn-group .btn {
-    background-color: #007ced;
-    border: none;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin-right: 10px;
-    transition: background-color 0.3s ease;
-}
-
-.projects .btn-group .btn:hover {
-    background-color: #005bb5;
-}
-
-/* Contact Me Section */
-.contact {
-    background-color: #007ced;
-    color: #fff;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.contact h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.contact p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
-.contact ul {
-    list-style-type: none;
-}
-
-.contact li {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-}
-
-.contact a {
-    color: #fff;
-    text-decoration: underline;
-}
-
-.contact a:hover {
-    color: #f0f8ff;
-}
-
-.project-image {
-    max-width: 300px;
-    object-fit: contain;
-    margin: 3em auto;
-}
-
-.project-image>img {
-    width: 100%;
-}
-
-/* Work Experience Section */
-.experience {
-    background-color: #222;
-    color: #e5e5e5;
-    padding: 60px 20px;
-    text-align: left;
-}
-
-.experience h2 {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #fff;
-}
-
-.experience-item {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.experience-item h3 {
-    color: #007ced;
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-}
-
-.experience-item p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    color: #ccc;
-}
-
-.experience-item ul {
-    list-style-type: disc;
-    padding-left: 20px;
-}
-
-.experience-item li {
-    margin-bottom: 10px;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #e5e5e5;
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 }

@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <div class="hero-header">
+  <div class="navbar-fixed">
     <div class="wrapper">
       <header>
         <div class="logo">
@@ -26,32 +26,38 @@
             <span></span>
           </div>
           <ul class="navlinks">
-            <li><a href="#">Home</a></li>
+            <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
       </header>
+    </div>
+  </div>
+
+  <div class="hero-header" id="home">
+    <div class="wrapper">
       <div class="container">
         <div class="hero-pic">
-          <img src="images/profile_photot_prakash.jpg" alt="profile pic" />
+          <img src="images/profile_photot_prakash.jpg" alt="Prakash Paudel Profile Picture" />
         </div>
         <div class="hero-text">
-          <h5>Hii , am</h5>
+          <h5>Hi, I'm</h5>
           <h1>Prakash Paudel</h1>
-          <h5>I'm <span class="input">Frontend Developer</span></h5>
+          <h5>I'm a <span class="input">Frontend Developer</span></h5>
           <div class="btn-group">
-            <a href="images/Prakash-paudel-SE1-resume.pdf" download="images/Prakash-paudel-SE1-resume.pdf"
+            <a href="images/Prakash_paudel-Frontend-Resume.pdf" target="_blank" rel="noopener noreferrer"
               class="btn active">Resume</a>
             <a href="#contact" class="btn">Contact</a>
           </div>
           <div class="social">
-            <a href="https://github.com/prakash22092002"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/prakash-paudel-226501251/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/prakash22092002" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/prakash-paudel-226501251/" target="_blank"><i
+                class="fab fa-linkedin"></i></a>
           </div>
-          <div id="projectContainer"></div>
         </div>
       </div>
     </div>
@@ -61,57 +67,93 @@
     <div class="wrapper">
       <h2>About Me</h2>
       <p>
-        Hello! I'm Prakash Paudel, a passionate Frontend Developer from
-        Chennai. I completed my undergraduate degree in B.Tech- Information
-        Technology at Panimalar Engineering College, affiliated with Anna
-        University, Chennai, Tamil Nadu. Currently, I am pursuing a Full Stack
-        Web Development course at Masai School, Bengaluru, Karnataka. My
-        journey in web development began with a fascination for how websites
-        work and has evolved into a full-fledged career. I specialize in
-        crafting user-friendly, responsive designs that not only look good but
-        also perform flawlessly across devices.
+        Hello! I'm Prakash Paudel, a passionate Frontend Developer from Chennai. I completed my undergraduate degree in
+        B.Tech- Information Technology at Panimalar Engineering College, affiliated with Anna University, Chennai, Tamil
+        Nadu. Currently, I am pursuing a Full Stack Web Development course at Masai School, Bengaluru, Karnataka. My
+        journey in web development began with a fascination for how websites work and has evolved into a full-fledged
+        career. I specialize in crafting user-friendly, responsive designs that not only look good but also perform
+        flawlessly across devices.
       </p>
+    </div>
+  </section>
 
-      <br><br><br>
-      <h3>TECHNICAL SKILLS</h3><br>
-      <p>HTML , CSS , JAVASCRIPT , PYTHON , REACT.JS , BOOTSTRAP , MONGO db , GIT & GITHUB , PROMPTING</p>
+  <section class="skills" id="skills">
+    <div class="wrapper">
+      <h2>Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Frontend Technologies</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">HTML5</span>
+            <span class="skill-tag">CSS3</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">React.js</span>
+            <span class="skill-tag">Bootstrap</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Backend & Database</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">REST APIs</span>
+            <span class="skill-tag">Node.js</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Tools & Others</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Git & GitHub</span>
+            <span class="skill-tag">Figma</span>
+            <span class="skill-tag">Responsive Design</span>
+            <span class="skill-tag">AI Prompting</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="projects" id="projects">
     <div class="wrapper">
-      <h2>Projects</h2>
-      <div class="project-container">
-        <div class="project">
+      <h2>Featured Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
           <div class="project-image">
-            <img src="images/Screenshot 2024-11-16 154929.png" alt="UI-Library Project Image" />
+            <img src="images/Screenshot 2024-11-16 154929.png" alt="UI-Library Project" />
           </div>
           <div class="project-info">
             <h3>UI-Library</h3>
             <p>
-              A comprehensive library of UI components designed for modern web
-              applications.
+              A comprehensive library of UI components designed for modern web applications. Features responsive design
+              patterns, accessibility-first components, and customizable themes.
             </p>
             <div class="btn-group">
-              <a href="https://github.com/prakash22092002/UI-Library-Website-" target="_blank" class="btn">GitHub</a>
-              <a href="https://pixel-ui1.netlify.app/" target="_blank" class="btn">Live Demo</a>
+              <a href="https://github.com/prakash22092002/UI-Library-Website-" target="_blank" class="btn">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="https://pixel-ui1.netlify.app/" target="_blank" class="btn">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
             </div>
           </div>
         </div>
-        <div class="project">
+        <div class="project-card">
           <div class="project-image">
-            <img src="images/Screenshot 2024-11-16 182655.png" alt="CloneScript Programming Language Project Image" />
+            <img src="images/Screenshot 2024-11-16 182655.png" alt="CloneScript Programming Language Project" />
           </div>
           <div class="project-info">
             <h3>CloneScript Programming Language</h3>
             <p>
-              A programming language project aimed at simplifying coding
-              through intuitive syntax and powerful features.
+              A innovative programming language project aimed at simplifying coding through intuitive syntax and
+              powerful features. Built with modern development practices and collaborative team effort.
             </p>
             <div class="btn-group">
-              <a href="https://github.com/ankursinha-github/AI-Architects_001/tree/develop" target="_blank"
-                class="btn">GitHub</a>
-              <a href="https://clonescriptlang.netlify.app/" target="_blank" class="btn">Live Demo</a>
+              <a href="https://github.com/ankursinha-github/AI-Architects_001/tree/develop" target="_blank" class="btn">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="https://clonescriptlang.netlify.app/" target="_blank" class="btn">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
             </div>
           </div>
         </div>
@@ -119,7 +161,6 @@
     </div>
   </section>
 
-  <!-- Experience Section -->
   <section class="experience" id="experience">
     <div class="wrapper">
       <h2>Work Experience</h2>
@@ -128,14 +169,14 @@
         <p><strong>Front-End Engineer (Full-Time)</strong> — December 2024 to July 2025</p>
         <ul>
           <li>Built and maintained scalable front-end dashboards using React.js and Figma, achieving 95% client
-            satisfaction.</li>
-          <li>Reduced dashboard load times by 45% using lazy loading, code splitting, and virtualization.</li>
+            satisfaction</li>
+          <li>Reduced dashboard load times by 45% using lazy loading, code splitting, and virtualization techniques</li>
           <li>Optimized API performance using React Query, reducing network requests by 50% and improving perceived
-            performance by 30%.</li>
-          <li>Implemented tree shaking and code splitting, reducing JavaScript bundle size by 25%.</li>
+            performance by 30%</li>
+          <li>Implemented tree shaking and code splitting, reducing JavaScript bundle size by 25%</li>
           <li>Enhanced SEO by using semantic HTML, lazy loading images, meta tags, and minimizing CLS, increasing
-            organic visits by 20%.</li>
-          <li>Built modular, reusable components, reducing code duplication by 40% and speeding up delivery by 35%.</li>
+            organic visits by 20%</li>
+          <li>Built modular, reusable components, reducing code duplication by 40% and speeding up delivery by 35%</li>
         </ul>
       </div>
     </div>
@@ -143,14 +184,17 @@
 
   <section class="contact" id="contact">
     <div class="wrapper">
-      <h2>Contact Me</h2>
+      <h2>Get In Touch</h2>
       <p>
-        Feel free to reach out to me through any of the following platforms:
+        I'm always open to discussing new opportunities and interesting projects. Let's connect!
       </p>
       <ul>
-        <li>Email: <a href="mailto:p.prakashpaudel35@gmail.com">p.prakashpaudel35@gmail.com</a></li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/prakash-paudel-226501251/" target="_blank">LinkedIn</a></li>
-        <li>GitHub: <a href="https://github.com/prakash22092002" target="_blank">GitHub</a></li>
+        <li><i class="fas fa-envelope"></i> Email: <a
+            href="mailto:p.prakashpaudel35@gmail.com">p.prakashpaudel35@gmail.com</a></li>
+        <li><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/prakash-paudel-226501251/"
+            target="_blank">Connect with me</a></li>
+        <li><i class="fab fa-github"></i> GitHub: <a href="https://github.com/prakash22092002" target="_blank">Check out
+            my code</a></li>
       </ul>
     </div>
   </section>
@@ -158,18 +202,54 @@
   <!-- Typed JS for typing text effect -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
   <script>
-    var togglebtn = document.querySelector(".togglebtn");
-    var nav = document.querySelector(".navlinks");
+    // Mobile menu toggle
+    const togglebtn = document.querySelector(".togglebtn");
+    const nav = document.querySelector(".navlinks");
+
     togglebtn.addEventListener("click", function () {
       this.classList.toggle("click");
       nav.classList.toggle("open");
     });
 
-    var typed = new Typed(".input", {
-      strings: ["Frontend Developer", "UX Designer", "Web Developer"],
-      typedSpeed: 10,
-      backSpeed: 55,
+    // Close mobile menu when clicking on a link
+    const navLinks = document.querySelectorAll(".navlinks a");
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        togglebtn.classList.remove("click");
+        nav.classList.remove("open");
+      });
+    });
+
+    // Typed text effect
+    const typed = new Typed(".input", {
+      strings: ["Frontend Developer", "UX Designer", "Web Developer", "React Developer"],
+      typeSpeed: 80,
+      backSpeed: 60,
       loop: true,
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Add scroll effect to navbar
+    window.addEventListener('scroll', function () {
+      const navbar = document.querySelector('.navbar-fixed');
+      if (window.scrollY > 100) {
+        navbar.style.backgroundColor = 'rgba(34, 34, 34, 0.98)';
+      } else {
+        navbar.style.backgroundColor = 'rgba(34, 34, 34, 0.95)';
+      }
     });
   </script>
 </body>
