@@ -5,13 +5,14 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Responsive Portfolio Website Design</title>
+  <title>Prakash Paudel - Frontend Developer</title>
   <link rel="stylesheet" href="style.css" />
   <!-- Font awesome cdn font icon css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
 </head>
 
 <body>
+  <!-- Fixed Navbar -->
   <div class="navbar-fixed">
     <div class="wrapper">
       <header>
@@ -49,8 +50,7 @@
           <h1>Prakash Paudel</h1>
           <h5>I'm a <span class="input">Frontend Developer</span></h5>
           <div class="btn-group">
-            <a href="images/Prakash_paudel-Frontend-Resume.pdf" target="_blank" rel="noopener noreferrer"
-              class="btn active">Resume</a>
+            <a href="#" id="resumeBtn" class="btn active">Resume</a>
             <a href="#contact" class="btn">Contact</a>
           </div>
           <div class="social">
@@ -250,6 +250,33 @@
       } else {
         navbar.style.backgroundColor = 'rgba(34, 34, 34, 0.95)';
       }
+    });
+
+    // Resume button functionality - Download AND Display in new tab
+    document.getElementById('resumeBtn').addEventListener('click', function (e) {
+      e.preventDefault();
+
+      // Path to your resume file
+      const resumePath = 'images/Prakash_paudel-Frontend-Resume.pdf';
+
+      // Method 1: Download the resume
+      const downloadLink = document.createElement('a');
+      downloadLink.href = resumePath;
+      downloadLink.download = 'Prakash_paudel-Frontend-Resume.pdf';
+      downloadLink.style.display = 'none';
+
+      // Add to DOM, trigger download, then remove
+      document.body.appendChild(downloadLink);
+      downloadLink.click();
+      document.body.removeChild(downloadLink);
+
+      // Method 2: Open/Display resume in new tab (slight delay to avoid popup blocker)
+      setTimeout(() => {
+        window.open(resumePath, '_blank', 'noopener,noreferrer');
+      }, 100);
+
+      // Optional: Show a message to user
+      console.log('Resume download started and opened in new tab!');
     });
   </script>
 </body>
