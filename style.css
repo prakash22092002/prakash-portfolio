@@ -355,6 +355,9 @@ nav .navlinks li a:hover {
 
 .project-info .btn-group {
     margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .project-info .btn {
